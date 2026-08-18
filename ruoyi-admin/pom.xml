@@ -42,6 +42,12 @@
             <artifactId>ruoyi-framework</artifactId>
         </dependency>
 
+        <!-- 新业务模块（MyBatis-Plus）-->
+        <dependency>
+            <groupId>com.ruoyi</groupId>
+            <artifactId>ruoyi-biz</artifactId>
+        </dependency>
+
         <!-- 定时任务-->
         <dependency>
             <groupId>com.ruoyi</groupId>

@@ -35,6 +35,17 @@
             <artifactId>druid-spring-boot-4-starter</artifactId>
         </dependency>
 
+        <!-- MyBatis-Plus（兼容原生 MyBatis，老业务 XML 可继续使用） -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot4-starter</artifactId>
+        </dependency>
+        <!-- 分页等插件依赖的 jsqlparser（3.5.9+ 可选模块） -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-jsqlparser</artifactId>
+        </dependency>
+
         <!-- 验证码 -->
         <dependency>
             <groupId>pro.fessional</groupId>

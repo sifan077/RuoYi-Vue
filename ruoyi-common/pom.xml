@@ -35,10 +35,20 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-        <!-- pagehelper 分页插件 -->
+        <!-- pagehelper 分页插件（老业务继续使用） -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- MyBatis-Plus 核心（分页 Page / IPage，供 MpPageUtils 使用；不引入 starter，避免重复自动配置） -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
         </dependency>
 
         <!-- 自定义验证注解 -->

@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ruoyi.common.constant.HttpStatus;
@@ -19,6 +20,7 @@ import com.ruoyi.common.utils.DateUtils;
 import com.ruoyi.common.utils.PageUtils;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.StringUtils;
+import com.ruoyi.common.utils.mp.MpPageUtils;
 import com.ruoyi.common.utils.sql.SqlUtil;
 
 /**
@@ -77,7 +79,7 @@ public class BaseController
     }
 
     /**
-     * 响应请求分页数据
+     * 响应请求分页数据（PageHelper）
      */
     @SuppressWarnings({ "rawtypes", "unchecked" })
     protected TableDataInfo getDataTable(List<?> list)
@@ -88,6 +90,14 @@ public class BaseController
         rspData.setRows(list);
         rspData.setTotal(new PageInfo(list).getTotal());
         return rspData;
+    }
+
+    /**
+     * 响应请求分页数据（MyBatis-Plus IPage）
+     */
+    protected TableDataInfo getDataTable(IPage<?> page)
+    {
+        return MpPageUtils.getDataTable(page);
     }
 
     /**
